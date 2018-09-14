@@ -14,6 +14,9 @@ flask-migrate = "*"
 flask-wtf = "*"
 flask-login = "*"
 faker = "*"
+flask-pagedown = "*"
+markdown = "*"
+bleach = "*"
 
 [dev-packages]
 watchdog = "*"
