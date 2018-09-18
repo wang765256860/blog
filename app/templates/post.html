@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
+{% from "form_template.html" import render_form %}
 {% import "_macros.html" as macros %}
 
 {% block title %}
-Flaksy - post
+Blog - post
 {% endblock %}
 
 {% block page_content %}
@@ -11,7 +11,7 @@ Flaksy - post
     <h4 id="comments">Comments</h4>
     {% if current_user.can(Permission.COMMENT) %}
     <div class="comment-form">
-        {{ wtf.quick_form(form) }}
+        {{ render_form(form) }}
     </div>
     {% endif %}
     {% include '_comments.html' %}
@@ -20,4 +20,9 @@ Flaksy - post
         {{ macros.pagination_widget(pagination, '.post', fragment='#comments', id=posts[0].id) }}
     </div>
     {% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ pagedown.include_pagedown() }}
 {% endblock %}

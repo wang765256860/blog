@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
+{% from "form_template.html" import render_form %}
 
 {% block title %}
-Flaksy - Register
+Blog - Register
 {% endblock %}
 
 {% block page_content %}
@@ -10,6 +10,6 @@ Flaksy - Register
     <h1>Register</h1>
 </div>
 <div class="col-md-4">
-    {{ wtf.quick_form(form) }}
+    {{ render_form(form) }}
 </div>
 {% endblock %}

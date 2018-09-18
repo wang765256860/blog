@@ -11,8 +11,8 @@ class Config:
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.qq.com')
     MAIL_PORT = int(os.environ.get('MAIL_PORT', '465'))
     MAIL_USE_SSL = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME', '765256860@qq.com')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD', 'anctvxdukdxnbbcc')
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     BLOG_MAIL_SUBJECT_PREFIX = '[BLOG]'
     BLOG_MAIL_SENDER = 'wangzhen <765256860@qq.com>'
     BLOG_ADMIN = os.environ.get('BLOG_ADMIN', MAIL_USERNAME)

@@ -19,19 +19,19 @@
                 </div>
                 <div class="post-footer">
                     {% if current_user == post.author %}
-                        <a href="{{ url_for('.edit', id=post.id) }}">
-                        <span class="label label-primary">Edit</span>
+                        <a class="badge badge-pill badge-secondary" href="{{ url_for('.edit', id=post.id) }}">
+                        Edit
                         </a>
                     {% elif current_user.is_administrator() %}
-                        <a href="{{ url_for('.edit', id=post.id) }}">
-                        <span class="label label-danger">Edit [Admin]</span>
+                        <a class="badge badge-pill badge-danger" href="{{ url_for('.edit', id=post.id) }}">
+                        Edit [Admin]
                         </a>
                     {% endif %}
-                    <a href="{{ url_for('.post', id=post.id) }}">
-                        <span class="label label-default">Permalink</span>
+                    <a class="badge badge-pill badge-info" href="{{ url_for('.post', id=post.id) }}">
+                        Permalink
                     </a>
-                    <a href="{{ url_for('.post', id=post.id) }}#comments">
-                        <span class="label label-primary">{{ post.comments.count() }} Comments</span>
+                    <a class="badge badge-pill badge-primary" href="{{ url_for('.post', id=post.id) }}#comments">
+                        {{ post.comments.count() }} Comments
                     </a>
                 </div>
             </div>

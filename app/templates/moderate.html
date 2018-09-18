@@ -2,7 +2,7 @@
 {% import "_macros.html" as macros %}
 
 {% block title %}
-Flasky - Comment Moderate
+Blog - Comment Moderate
 {% endblock %}
 
 {% block page_content %}
@@ -16,4 +16,9 @@ Flasky - Comment Moderate
     {{ macros.pagination_widget(pagination, '.moderate') }}
     </div>
     {% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ pagedown.include_pagedown() }}
 {% endblock %}
