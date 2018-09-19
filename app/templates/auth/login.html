@@ -10,7 +10,7 @@ Blog - Login
     <h1>Login</h1>
 </div>
 <div class="col-md-8">
-    {{ render_form(form, url_for('auth.login')) }}
+    {{ render_form(form) }}
     <br>
     <p>Forget your password? <a href="{{ url_for('auth.password_reset_request') }}">Click here to reset it</a>.</p>
     <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>

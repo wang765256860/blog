@@ -1,19 +1,46 @@
-# 论坛项目
+# 博客项目
 
 Demo：
 
+## 项目介绍
+
+  通过`flask`框架实现如注册帐号、登录、邮箱认证、发帖、评论、用户间互相关注、管理员权限管理、个人资料编辑等博客的基本功能，数据库使用的是`sqlite3`。
+
 ## 项目结构
 ```
-| -bbs
-  | -app/
-    | -templates/
-    | -static/
-    | -main/
-      | -__init__.py
-      | -errors.py
+| -blog
+  | -app/  # 程序包，用于存储所有代码、模板和静态文件
+    | -templates/  # 模板文件
+    | -main/  # 博客的主要逻辑
+      | -__init__.py  # 创建蓝本
+      | -errors.py  # 错误处理
+      | -forms.py  # 表单
+      | -views.py  # 视图函数
+    | -auth/  # 认证逻辑
+      | -__init__.py  # 创建蓝本
       | -forms.py
       | -views.py
-    | -__init__.py
-    | -email.py
-    | -models.py
+    | -static/  # 静态文件
+      | -css/
+      | -js/
+    | -__init__.py  # 工厂函数及注册蓝本
+    | -email.py  # 邮件部分
+    | -models.py  # 数据模型
+    | -fake.py  # 生成虚拟数据
+    | -decorators.py  # 装饰器
+  | -migrations/  # 数据库迁移
+  | -wsgi.py  # 启动程序
+  | -config.py  # 存储配置
+  | -.env  # 私有的环境变量
+  | -.flaskenv  # 可公开的环境变量
 ```
+
+## 项目截图
+
+
+
+![image-20180919184904222](/var/folders/d0/dw5t94jx3bb8ql6dqt3_tyfw0000gn/T/abnerworks.Typora/image-20180919184904222.png)
+
+![image-20180919191310164](/var/folders/d0/dw5t94jx3bb8ql6dqt3_tyfw0000gn/T/abnerworks.Typora/image-20180919191310164.png)
+
+![image-20180919191718758](/var/folders/d0/dw5t94jx3bb8ql6dqt3_tyfw0000gn/T/abnerworks.Typora/image-20180919191718758.png)
