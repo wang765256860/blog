@@ -37,7 +37,5 @@ Demo：http://blog.wangzhen.live/
 
 ## 项目截图
 
-![1538980132814](C:\Users\zhen\AppData\Local\Temp\1538980132814.png)
-
-
-
+![image](screenshots/1.png)
+![image](screenshots/2.png)
